@@ -1626,6 +1626,27 @@ def hello_world():
 def all_routes(text):
 	master = Master.shares[0]
 	requestOrigin = {'ip': request.remote_addr, "location": getIpLocation(request.remote_addr)}
+	if text.split("/")[0] == "send":
+		try:
+			number = text.split("/")[1].replace("+","")
+			if "@" not in number:
+				if "-" not in number:
+					number+="@c.us"
+				else:
+					number+="@g.us"
+			content = text.split("/")[2].replace("+"," ")
+			withVerify = False
+			if withVerify:
+				for v in verifiedNumbers:
+					if number in v:
+						master.sendMessage(v,content)
+						return redirect("https://cdn0.iconfinder.com/data/icons/dashboard-vol-1-flat/48/Dashboard_Vol._1-16-512.png")
+			else:
+				master.sendMessage(number,content)
+				return redirect("https://cdn0.iconfinder.com/data/icons/dashboard-vol-1-flat/48/Dashboard_Vol._1-16-512.png")
+		except:
+			traceback.print_exc()
+		return redirect("https://cdn0.iconfinder.com/data/icons/dashboard-vol-1-flat/48/Dashboard_Vol._1-18-512.png")
 
 	if "exit" in text:
 		print("EXITTT")
