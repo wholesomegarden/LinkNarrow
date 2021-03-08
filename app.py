@@ -22,6 +22,19 @@ import shazi
 import speech_recognition as sr
 recognizer = sr.Recognizer()
 TEST = {0:None}
+
+'''
+heroku ps:exec -a linkgateway0
+cd /app
+git clone https://github.com/wholesomegarden/LinkSession
+cp -r session LinkSession/session
+cd LinkSession
+git config --global user.email "fire17@gmail.com"
+git config --global user.name 'fre17'
+git add .
+git commit -m 'session qr'
+git push
+'''
 # from ServiceImporter import *
 # https://github.com/open-wa/wa-automate-python
 
@@ -47,7 +60,7 @@ production = False
 
 Headless = not runLocal
 noFlask = runLocal
-# Headless = True
+Headless = True
 # noFlask = False
 
 LASTGROUP = {0:1000}
@@ -96,8 +109,8 @@ class Master(object):
 	operator = '972547932000'
 	emptyNumber = '972543610404'
 	# db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}}
-	db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}, 'id': '972722656565-1615227273@g.us'}
-	# db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}}
+	# db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}, 'id': '972722656565-1615227273@g.us'}
+	db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}}
 
 	 # 'lastBackup': 1611071801.4876792, 'init': 1611071653.7335632, 'backupInterval': 0, 'backupDelay': 3, 'lastBackupServices': 0, 'servicesDB': {'Echo': {'dbID': '972512170493-1610802351@g.us'}, 'Danilator': {'dbID': '972512170493-1610802360@g.us'}, 'Reminders': {'dbID': '972512170493-1610802365@g.us'}, 'Music': {'dbID': '972512170493-1610802370@g.us'}, 'Master': {'dbID': '972512170493-1610965551@g.us'}, 'Experimental': {'dbID': '972512170493-1611059017@g.us'}}, 'availableChats': {'Master': {'972512170493-1611068831@g.us': 'https://chat.whatsapp.com/GhTABLFn3Aq18MI89MFBU8', '972512170493-1611071667@g.us': 'https://chat.whatsapp.com/LGABshra2Wd8rpZ8AduhuX'}, 'Music': {'972512170493-1611071128@g.us': 'https://chat.whatsapp.com/G3VQkKSrsuZJ3OiRz3Iof9', '972512170493-1611071137@g.us': 'https://chat.whatsapp.com/JN4juvGVYbbLVOoehExtTY'}, 'Experimental': {'972512170493-1611059125@g.us': 'https://chat.whatsapp.com/GIUwJiF3iCg1vioSHkkkQ8', '972512170493-1611059200@g.us': 'https://chat.whatsapp.com/IZXOC41bg112sKwE5UcoQO'}}}
 
@@ -288,7 +301,7 @@ class Master(object):
 
 			''' load DB '''
 			## overwrite to init db
-			initOverwrite = False
+			initOverwrite = True
 			if initOverwrite:
 				self.backup(now = True)
 			# driver.updateDB(self.db,number=self.db["id"])
