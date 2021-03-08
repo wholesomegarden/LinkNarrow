@@ -1634,7 +1634,14 @@ def all_routes(text):
 					number+="@c.us"
 				else:
 					number+="@g.us"
-			content = text.split("/")[2].replace("+"," ")
+
+			contentAt = 2
+			content = ""
+			if len(text.split("/")) > 3:
+				content = "_From: "+text.split("/")[contentAt]+"_"
+				contentAt +=1
+
+			content += text.split("/")[contentAt].replace("+"," ")
 			withVerify = False
 			if withVerify:
 				for v in verifiedNumbers:
