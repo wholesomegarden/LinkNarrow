@@ -1,4 +1,14 @@
-[9632:9632:0304/140623.898302:ERROR:profile_manager.cc(1459)] Cannot create profile at path /home/magic/wholesomegarden/TofaatTevaNarrow/session/rprofile2//home/magic/wholesomegarden/TofaatTevaNarrow/session/rprofile2rprofile2/Profile 1
-[9632:9668:0304/140623.916364:ERROR:object_proxy.cc(621)] Failed to call method: org.freedesktop.Notifications.GetCapabilities: object_path= /org/freedesktop/Notifications: org.freedesktop.DBus.Error.UnknownMethod: No such method 'GetCapabilities' in interface 'org.freedesktop.Notifications' at object path '/org/freedesktop/Notifications' (signature '')
-[9632:9632:0304/140624.093342:WARNING:CONSOLE(1693)] "HTML Imports is deprecated and will be removed in M80, around February 2020. Please use ES modules instead. See https://www.chromestatus.com/features/5144752345317376 and https://developers.google.com/web/updates/2019/07/web-components-time-to-upgrade for more details.", source: chrome://md-user-manager/ (1693)
-[9632:9632:0304/141000.012436:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[3142:3142:0308/200328.998196:ERROR:profile_manager.cc(1459)] Cannot create profile at path /home/magic/wholesomegarden/LinkNarrow/session/rprofile2//home/magic/wholesomegarden/LinkNarrow/session/rprofile2rprofile2/Profile 1
+[3142:3142:0308/200329.058491:WARNING:CONSOLE(1693)] "HTML Imports is deprecated and will be removed in M80, around February 2020. Please use ES modules instead. See https://www.chromestatus.com/features/5144752345317376 and https://developers.google.com/web/updates/2019/07/web-components-time-to-upgrade for more details.", source: chrome://md-user-manager/ (1693)
+[3178:3183:0308/200336.927017:WARNING:spdy_session.cc(3335)] Received WINDOW_UPDATE for invalid stream 15
+[3178:3183:0308/200336.927178:WARNING:spdy_session.cc(3335)] Received WINDOW_UPDATE for invalid stream 17
+[3178:3183:0308/200336.927202:WARNING:spdy_session.cc(3335)] Received WINDOW_UPDATE for invalid stream 19
+[3178:3183:0308/200336.927220:WARNING:spdy_session.cc(3335)] Received WINDOW_UPDATE for invalid stream 21
+[3178:3183:0308/200336.927538:WARNING:spdy_session.cc(3388)] Received HEADERS for invalid stream 21
+[3178:3183:0308/200336.927635:WARNING:spdy_session.cc(3388)] Received HEADERS for invalid stream 17
+[3178:3183:0308/200336.927714:WARNING:spdy_session.cc(3388)] Received HEADERS for invalid stream 19
+[3178:3183:0308/200336.929408:WARNING:spdy_session.cc(3335)] Received WINDOW_UPDATE for invalid stream 25
+[3178:3183:0308/200336.929550:WARNING:spdy_session.cc(3388)] Received HEADERS for invalid stream 25
+[3178:3183:0308/200336.929607:WARNING:spdy_session.cc(3335)] Received WINDOW_UPDATE for invalid stream 27
+[3178:3183:0308/200336.929704:WARNING:spdy_session.cc(3388)] Received HEADERS for invalid stream 27
+[3178:3183:0308/200336.929789:WARNING:spdy_session.cc(3388)] Received HEADERS for invalid stream 15

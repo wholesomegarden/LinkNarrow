@@ -1,10 +1,3 @@
-2021/03/07-12:55:51.644 6433 Reusing MANIFEST /home/magic/wholesomegarden/TofaatTevaNarrow/session/rprofile2/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2021/03/07-12:55:51.645 6433 Recovering log #23
-2021/03/07-12:55:51.792 6433 Reusing old log /home/magic/wholesomegarden/TofaatTevaNarrow/session/rprofile2/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000023.log 
-2021/03/07-12:58:07.196 6433 Level-0 table #28: started
-2021/03/07-12:58:07.309 6433 Level-0 table #28: 1241418 bytes OK
-2021/03/07-12:58:07.314 6433 Delete type=0 #23
-2021/03/07-12:58:07.505 653b Compacting 1@1 + 1@2 files
-2021/03/07-12:58:07.691 653b Generated table #29@1: 49009 keys, 1826543 bytes
-2021/03/07-12:58:07.691 653b Compacted 1@1 + 1@2 files => 1826543 bytes
-2021/03/07-12:58:07.692 653b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/08-20:03:36.963 c78 Reusing MANIFEST /home/magic/wholesomegarden/LinkNarrow/session/rprofile2/Profile 4/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/08-20:03:36.964 c78 Recovering log #4
+2021/03/08-20:03:36.964 c78 Reusing old log /home/magic/wholesomegarden/LinkNarrow/session/rprofile2/Profile 4/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
