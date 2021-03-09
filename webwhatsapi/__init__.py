@@ -346,7 +346,9 @@ class WhatsAPIDriver(object):
 		print(newGroupID,"NEW GROUP")
 		print(newGroupID,"NEW GROUP")
 		print(newGroupID,"NEW GROUP")
-		newGroupID = self.fixGroupID(newGroupID)
+		FixGroupIDiPhone = False
+		if FixGroupIDiPhone:
+			newGroupID = self.fixGroupID(newGroupID)
 		print(newGroupID,"NEW GROUP FIX",)
 		# G = self.getgetGroup(newGroupID)
 
@@ -404,8 +406,11 @@ class WhatsAPIDriver(object):
 		print("GETTING META")
 		if isDB:
 			print("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD", newGroupID)
-			self.sendMessage(newGroupID,"YO")
-			time.sleep(3)
+			time.sleep(6)
+			print("sending........ to db",newGroupID)
+			self.sendMessageQuick(newGroupID,"YO")
+			print("sent........ to db",newGroupID)
+			time.sleep(6)
 		invite = meta = None
 		try:
 			invite = meta = self.metadata(newGroupID)
@@ -492,7 +497,7 @@ class WhatsAPIDriver(object):
 	def sendMessageQuick(self, number, content):
 		# self.wapi_functions.sendMessageToID(recipient, message)
 		print("NUMBER",number, content)
-		content = "XXXXXXXXXX"
+		# content = "XXXXXXXXXX"
 		code = "WAPI.sendMessageToID('"+number+"', '"+content+"')"
 		self.driver.execute_script(script=code)
 		return True

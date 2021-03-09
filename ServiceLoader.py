@@ -23,7 +23,8 @@ masterServices = ["Master","Experimental"]
 
 class ServiceLoader(object):
     # def LoadServices(send, backup, genLink, list = ["Master", "TofaatTeva", "Echo", "Experimental"], master = None):
-    def LoadServices(send, backup, genLink, list = ["Master", "Echo", "Experimental"], master = None):
+    # def LoadServices(send, backup, genLink, list = ["Master", "Echo", "Experimental"], master = None):
+    def LoadServices(send, backup, genLink, list = ["Master"], master = None):
         services = {}
         for service in list:
             if service in masterServices :

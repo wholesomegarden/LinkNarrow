@@ -30,7 +30,7 @@ git clone https://github.com/wholesomegarden/LinkSession
 cp -r session LinkSession/session
 cd LinkSession
 git config --global user.email "fire17@gmail.com"
-git config --global user.name 'fre17'
+git config --global user.name 'fire17'
 git add .
 git commit -m 'session qr'
 git push
@@ -61,7 +61,9 @@ production = False
 Headless = not runLocal
 noFlask = runLocal
 Headless = True
-# noFlask = False
+noFlask = False
+useDB = True
+
 
 LASTGROUP = {0:1000}
 
@@ -105,12 +107,12 @@ class Master(object):
 	# db = {'masters': ['972512170493', '972547932000'], 'system': ['972512170493', '972543610404'], 'users': {}, 'groups': {}, 'id': '972547932000-1610379075@g.us'}
 	# mynumber = '972512170493'
 	# mynumber = '972584422646'
-	mynumber = '972722656565'
+	mynumber = '972733989898'
 	operator = '972547932000'
 	emptyNumber = '972543610404'
 	# db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}}
-	# db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}, 'id': '972722656565-1615227273@g.us'}
-	db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}}
+	db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}, 'id': '972733989898-1615280291@g.us'}
+	# db = {'masters': [mynumber, operator], 'system': [mynumber, emptyNumber], 'users': {}, 'groups': {}}
 
 	 # 'lastBackup': 1611071801.4876792, 'init': 1611071653.7335632, 'backupInterval': 0, 'backupDelay': 3, 'lastBackupServices': 0, 'servicesDB': {'Echo': {'dbID': '972512170493-1610802351@g.us'}, 'Danilator': {'dbID': '972512170493-1610802360@g.us'}, 'Reminders': {'dbID': '972512170493-1610802365@g.us'}, 'Music': {'dbID': '972512170493-1610802370@g.us'}, 'Master': {'dbID': '972512170493-1610965551@g.us'}, 'Experimental': {'dbID': '972512170493-1611059017@g.us'}}, 'availableChats': {'Master': {'972512170493-1611068831@g.us': 'https://chat.whatsapp.com/GhTABLFn3Aq18MI89MFBU8', '972512170493-1611071667@g.us': 'https://chat.whatsapp.com/LGABshra2Wd8rpZ8AduhuX'}, 'Music': {'972512170493-1611071128@g.us': 'https://chat.whatsapp.com/G3VQkKSrsuZJ3OiRz3Iof9', '972512170493-1611071137@g.us': 'https://chat.whatsapp.com/JN4juvGVYbbLVOoehExtTY'}, 'Experimental': {'972512170493-1611059125@g.us': 'https://chat.whatsapp.com/GIUwJiF3iCg1vioSHkkkQ8', '972512170493-1611059200@g.us': 'https://chat.whatsapp.com/IZXOC41bg112sKwE5UcoQO'}}}
 
@@ -301,48 +303,49 @@ class Master(object):
 
 			''' load DB '''
 			## overwrite to init db
-			initOverwrite = True
+			initOverwrite = False
 			if initOverwrite:
-				self.backup(now = True)
+				self.backup(now = True,overWrite = True)
 			# driver.updateDB(self.db,number=self.db["id"])
-			lastDB = self.loadDB()
-			self.db = lastDB
-			self.db["init"] = time.time()
-			self.db["backupInterval"] = 10*60
-			if runLocal:
-				self.db["backupInterval"] = 0
+			if useDB:
+				lastDB = self.loadDB()
+				self.db = lastDB
+				self.db["init"] = time.time()
+				self.db["backupInterval"] = 10*60
+				if runLocal:
+					self.db["backupInterval"] = 0
 
-			self.db["backupDelay"] = 10
-			if runLocal:
-				self.db["backupDelay"] = 3
+				self.db["backupDelay"] = 10
+				if runLocal:
+					self.db["backupDelay"] = 3
 
-			self.db["lastBackup"] = 0
-			self.db["lastBackupServices"] = 0
-			# self.backup()
-			print(''' :::::::::::::::::::::::::::::::::::: ''')
-			print(''' :::::::::::::::::::::::::::::::::::: ''')
-			print(''' ::::                           ::::: ''')
-			print(''' ::::     DATABASE LOADED       ::::: ''')
-			print(''' ::::                           ::::: ''')
-			print(''' :::::::::::::::::::::::::::::::::::: ''')
-			print(''' :::::::::::::::::::::::::::::::::::: ''')
-			print(self.db)
-			print()
-			if "groups" in self.db:
-				for group in self.db["groups"]:
-					if "links" in self.db["groups"][group]:
-						for link in self.db["groups"][group]["links"]:
-							self.links[link] = self.db["groups"][group]["links"][link]
-
+				self.db["lastBackup"] = 0
+				self.db["lastBackupServices"] = 0
+				# self.backup()
 				print(''' :::::::::::::::::::::::::::::::::::: ''')
 				print(''' :::::::::::::::::::::::::::::::::::: ''')
 				print(''' ::::                           ::::: ''')
-				print(''' ::::     LINKS LOADED          ::::: ''')
+				print(''' ::::     DATABASE LOADED       ::::: ''')
 				print(''' ::::                           ::::: ''')
 				print(''' :::::::::::::::::::::::::::::::::::: ''')
 				print(''' :::::::::::::::::::::::::::::::::::: ''')
-				print(self.links)
+				print(self.db)
 				print()
+				if "groups" in self.db:
+					for group in self.db["groups"]:
+						if "links" in self.db["groups"][group]:
+							for link in self.db["groups"][group]["links"]:
+								self.links[link] = self.db["groups"][group]["links"][link]
+
+					print(''' :::::::::::::::::::::::::::::::::::: ''')
+					print(''' :::::::::::::::::::::::::::::::::::: ''')
+					print(''' ::::                           ::::: ''')
+					print(''' ::::     LINKS LOADED          ::::: ''')
+					print(''' ::::                           ::::: ''')
+					print(''' :::::::::::::::::::::::::::::::::::: ''')
+					print(''' :::::::::::::::::::::::::::::::::::: ''')
+					print(self.links)
+					print()
 
 			# if "availableChats" in self.db:
 			# 	for group in self.db["groups"]:
@@ -361,7 +364,8 @@ class Master(object):
 			# 	print()
 
 			self.services = ServiceLoader.LoadServices(send = self.send, backup = self.backupService, genLink = self.genLink, master = self)
-			self.initServicesDB()
+			if useDB:
+				self.initServicesDB()
 			print(''' :::::::::::::::::::::::::::::::::::: ''')
 			print(''' :::::::::::::::::::::::::::::::::::: ''')
 			print(''' ::::                           ::::: ''')
@@ -1367,7 +1371,7 @@ https://www.tofaat-teva.co.il/joinus
 					# print("CURDB:\n",self.db)
 					if "masters" not in self.db:
 						self.db["masters"] = [self.mynumber, self.operator]
-					newGroupID,invite = self.driver.newGroup(newGroupName = service+"_DB", number = "+"+self.db["masters"][1], local = runLocal, test = TEST)
+					newGroupID,invite = self.driver.newGroup(newGroupName = service+"_DB", number = "+"+self.db["masters"][1], local = runLocal, test = TEST, isDB = True)
 					# print(newGroup)
 					# if "tuple" in str(type(newGroup)):
 					# 	newGroup = newGroup[0]
@@ -1541,30 +1545,32 @@ https://www.tofaat-teva.co.il/joinus
 
 		self.db["lastBackupServices"] = time.time()
 
-	def backup(self, now = None):
+	def backup(self, now = None, overWrite = False):
 		if not self.startBackup:
 			self.startBackup = True
-			self.backupstart()
+			self.backupstart(overWrite = overWrite)
 
 		self.activity = True
 		if now:
 			self.backupNow = True
 
-	def backupstart(self, now = None):
-		bT = Thread(target = self.backupAsync,args = [now])
+	def backupstart(self, now = None, overWrite = False):
+		bT = Thread(target = self.backupAsync,args = [[now, overWrite]])
 		bT.start()
 
 	# def backupAsync(self,data, delay = 4*60):
 	def backupAsync(self,data, delay = 4*1):
+		now, overWrite = data
 		while(True):
-			t = time.time()
-			while(time.time()-t < delay and not self.backupNow):
-				time.sleep(10)
-			if self.activity or self.backupNow:
-				self.activity = False
-				self.backupNow = False
-				self.db["lastBackup"] = time.time()
-				self.driver.updateDB(self.db,number=self.db["id"])
+			if useDB or overWrite:
+				t = time.time()
+				while(time.time()-t < delay and not self.backupNow):
+					time.sleep(10)
+				if self.activity or self.backupNow:
+					self.activity = False
+					self.backupNow = False
+					self.db["lastBackup"] = time.time()
+					self.driver.updateDB(self.db,number=self.db["id"])
 
 
 		# now = data
@@ -1648,22 +1654,26 @@ def all_routes(text):
 				else:
 					number+="@g.us"
 
+
 			contentAt = 2
 			content = ""
 			if len(text.split("/")) > 3:
-				content = "_From: "+text.split("/")[contentAt]+"_"
+				content = "_From *"+text.split("/")[contentAt]+":*_ \n"
 				content = content.replace("+"," ")
 				contentAt +=1
 
 			content += text.split("/")[contentAt].replace("+"," ")
 			withVerify = False
+			print("MSG:",content)
 			if withVerify:
 				for v in verifiedNumbers:
 					if number in v:
 						master.sendMessage(v,content)
+						# master.driver.sendMessageQuick(v,content)
 						return redirect("https://cdn0.iconfinder.com/data/icons/dashboard-vol-1-flat/48/Dashboard_Vol._1-16-512.png")
 			else:
 				master.sendMessage(number,content)
+				# master.driver.sendMessageQuick(number,content)
 				return redirect("https://cdn0.iconfinder.com/data/icons/dashboard-vol-1-flat/48/Dashboard_Vol._1-16-512.png")
 		except:
 			traceback.print_exc()
