@@ -1841,6 +1841,7 @@ def flaskRunAsync(data):
 	print("9999999999999999999999999999")
 
 
+MYPORT = 8087
 
 if __name__ == '__main__':
 	flaskRun(master)
@@ -1852,14 +1853,14 @@ if __name__ == '__main__':
 		# print("STARTING APP")
 		if runLocal :
 			pass
-			app.run(debug=True, host='0.0.0.0',use_reloader=False)
+			app.run(debug=True, host='0.0.0.0',use_reloader=False, port=MYPORT)
 	# app.run(debug=True, host='0.0.0.0',use_reloader=False)
 else:
 	flaskRun(master)
 	if not noFlask:
 		if runLocal :
 			pass
-			app.run(debug=True, host='0.0.0.0',use_reloader=False)
+			app.run(debug=True, host='0.0.0.0',use_reloader=False, port = MYPORT)
 		# app.run(debug=True, host='0.0.0.0',use_reloader=False)
 	print("STARTING APP22222222222")
 	# print("STARTING APP22222222222")
