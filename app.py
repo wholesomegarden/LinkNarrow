@@ -46,7 +46,7 @@ git push
 from ServiceLoader import *
 from MasterService import *
 
-# TODO CHECK Automatically
+# TODO CHECK Automaticallyt
 runLocal = True
 on_heroku = False
 if 'ON_HEROKU' in os.environ:
@@ -1851,6 +1851,13 @@ if __name__ == '__main__':
 		# print("STARTING APP")
 		# print("STARTING APP")
 		# print("STARTING APP")
+		print("RUNNING PORT", MYPORT)
+		print("RUNNING PORT", MYPORT)
+		print("RUNNING PORT", MYPORT)
+		print("RUNNING PORT", MYPORT)
+		print("RUNNING PORT", MYPORT)
+		print("RUNNING PORT", MYPORT)
+		print("RUNNING PORT", MYPORT)
 		if runLocal :
 			pass
 			app.run(debug=True, host='0.0.0.0',use_reloader=False, port=MYPORT)
@@ -1860,6 +1867,13 @@ else:
 	if not noFlask:
 		if runLocal :
 			pass
+			print("RUNNING PORT", MYPORT)
+			print("RUNNING PORT", MYPORT)
+			print("RUNNING PORT", MYPORT)
+			print("RUNNING PORT", MYPORT)
+			print("RUNNING PORT", MYPORT)
+			print("RUNNING PORT", MYPORT)
+			print("RUNNING PORT", MYPORT)
 			app.run(debug=True, host='0.0.0.0',use_reloader=False, port = MYPORT)
 		# app.run(debug=True, host='0.0.0.0',use_reloader=False)
 	print("STARTING APP22222222222")
