@@ -1647,10 +1647,10 @@ def all_routes(text):
 
 			contentAt = 2
 			content = ""
-			if len(text.split("/")) > 3:
-				content = "_From *"+text.split("/")[contentAt]+":*_ \n"
-				content = content.replace("+"," ")
-				contentAt +=1
+			# if len(text.split("/")) > 3:
+			# 	content = "_From *"+text.split("/")[contentAt]+":*_ \n"
+			# 	content = content.replace("+"," ")
+			# 	contentAt +=1
 
 			content += "/".join(text.split("/")[contentAt:])
 			content = content.replace("+"," ")
