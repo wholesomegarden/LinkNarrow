@@ -739,7 +739,7 @@ class WhatsAPIDriver(object):
 				if self._profile_path is not None:
 					self._profile.add_argument("user-data-dir=%s" % self._profile_path)
 				if proxy is not None:
-					self._profile.add_argument("--proxy-server=%s" % proxy)
+					self._profile.add_argumFent("--proxy-server=%s" % proxy)
 				if headless:
 					self._profile.add_argument("headless")
 				if chrome_options is not None:
@@ -752,10 +752,12 @@ class WhatsAPIDriver(object):
 				self.driver = webdriver.Chrome(executable_path=bPath,chrome_options=self._profile, **extra_params)
 			else:
 				chrome_options = webdriver.ChromeOptions()
-				executable_path = "/root/LinkNarrow/chromedriver"
 				binPath = "/usr/bin/google-chrome"
 				profileDir = "/session/rprofile2"
+				executable_path = "/root/LinkNarrow/chromedriver"
 				profileDir = "/root/LinkNarrow"+profileDir
+				# executable_path = "/home/magic/wholesomegarden/LinkNarrow/chromedriver"
+				# profileDir = "/home/magic/wholesomegarden/LinkNarrow"+profileDir
 				print(binPath, executable_path)
 				print(binPath, executable_path)
 				print(binPath, executable_path)

@@ -60,8 +60,8 @@ production = False
 
 Headless = not runLocal
 noFlask = runLocal
-Headless = True
-noFlask = False
+# Headless = True
+# noFlask = False
 useDB = True
 
 
@@ -217,8 +217,10 @@ class Master(object):
 			# profileDir = "/"+"/".join(profileDir.split("/")[2:])+"L"
 			profileDir = "/"+"/".join(profileDir.split("/")[2:])
 			chrome_options = webdriver.ChromeOptions()
-			executable_path = "/root/LinkNarrow/chromedriver"
 			binPath = "/usr/bin/google-chrome"
+			# executable_path = "/home/magic/wholesomegarden/LinkNarrow/chromedriver"
+			# profileDir = "/home/magic/wholesomegarden/LinkNarrow"+profileDir
+			executable_path = "/root/LinkNarrow/chromedriver"
 			profileDir = "/root/LinkNarrow"+profileDir
 
 			print(binPath, executable_path)
@@ -796,10 +798,10 @@ class Master(object):
 					traceback.print_exc()
 			autoReplyMsg = '''
 *We Got Your Message*
-(הודעה אוטמטית)
-♥️
+(הודעה אוטמטית מותאמת אישית) ♥️
 '''
-			backChannel = "972547932000@c.us"
+			# backChannel = "972547932000@c.us"
+			backChannel = "972733989898-1615901493@g.us"
 
 			if "c" in mChatID and "chat" not in str(mType):
 				self.sendMessage(mSenderID, autoReplyMsg)
