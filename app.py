@@ -1652,7 +1652,8 @@ def all_routes(text):
 				content = content.replace("+"," ")
 				contentAt +=1
 
-			content += text.split("/")[contentAt].replace("+"," ")
+			content += "/".join(text.split("/")[contentAt:])
+			content = content.replace("+"," ")
 			withVerify = False
 			print("MSG:",content)
 			if withVerify:
