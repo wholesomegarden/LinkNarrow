@@ -752,10 +752,10 @@ class WhatsAPIDriver(object):
 				self.driver = webdriver.Chrome(executable_path=bPath,chrome_options=self._profile, **extra_params)
 			else:
 				chrome_options = webdriver.ChromeOptions()
-				executable_path = "/home/magic/wholesomegarden/LinkNarrow/chromedriver"
+				executable_path = "/root/LinkNarrow/chromedriver"
 				binPath = "/usr/bin/google-chrome"
 				profileDir = "/session/rprofile2"
-				profileDir = "/home/magic/wholesomegarden/LinkNarrow"+profileDir
+				profileDir = "/root/LinkNarrow"+profileDir
 				print(binPath, executable_path)
 				print(binPath, executable_path)
 				print(binPath, executable_path)

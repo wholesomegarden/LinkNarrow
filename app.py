@@ -217,9 +217,9 @@ class Master(object):
 			# profileDir = "/"+"/".join(profileDir.split("/")[2:])+"L"
 			profileDir = "/"+"/".join(profileDir.split("/")[2:])
 			chrome_options = webdriver.ChromeOptions()
-			executable_path = "/home/magic/wholesomegarden/LinkNarrow/chromedriver"
+			executable_path = "/root/LinkNarrow/chromedriver"
 			binPath = "/usr/bin/google-chrome"
-			profileDir = "/home/magic/wholesomegarden/LinkNarrow"+profileDir
+			profileDir = "/root/LinkNarrow"+profileDir
 
 			print(binPath, executable_path)
 			# input()
