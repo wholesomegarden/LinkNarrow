@@ -1,0 +1,14 @@
+2021/12/05-19:08:21.546 300c Reusing MANIFEST /home/magic/.config/google-chrome/Profile 9/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/05-19:08:21.547 300c Recovering log #7
+2021/12/05-19:08:21.547 300c Reusing old log /home/magic/.config/google-chrome/Profile 9/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000007.log 
+2021/12/05-19:08:22.965 2d66 Level-0 table #12: started
+2021/12/05-19:08:22.971 2d66 Level-0 table #12: 322746 bytes OK
+2021/12/05-19:08:22.972 2d66 Delete type=0 #7
+2021/12/05-19:08:22.973 2d66 Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/12/05-19:08:22.973 2d66 Manual compaction at level-1 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at '\x00\x05\x00\x00\xc8\x13\x00l\x00r\x00u\x00-\x00m\x00e\x00d\x00i\x00a\x00-\x00m\x00e\x00t\x00a\x00-\x00i\x00n\x00f\x00o' @ 31315 : 0
+2021/12/05-19:08:22.973 2d66 Compacting 1@1 + 1@2 files
+2021/12/05-19:08:22.980 2d66 Generated table #13@1: 227 keys, 8043 bytes
+2021/12/05-19:08:22.980 2d66 Compacted 1@1 + 1@2 files => 8043 bytes
+2021/12/05-19:08:22.981 2d66 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/05-19:08:22.981 2d66 Delete type=2 #12
+2021/12/05-19:08:22.981 2d66 Manual compaction at level-1 from '\x00\x05\x00\x00\xc8\x13\x00l\x00r\x00u\x00-\x00m\x00e\x00d\x00i\x00a\x00-\x00m\x00e\x00t\x00a\x00-\x00i\x00n\x00f\x00o' @ 31315 : 0 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)

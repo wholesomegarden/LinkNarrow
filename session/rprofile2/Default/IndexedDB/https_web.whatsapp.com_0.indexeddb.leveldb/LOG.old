@@ -1,0 +1,15 @@
+2021/02/25-02:31:04.156 1c69 Reusing MANIFEST /home/magic/.config/google-chrome/Profile 9/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/25-02:31:04.157 1c69 Recovering log #4
+2021/02/25-02:31:04.157 1c69 Reusing old log /home/magic/.config/google-chrome/Profile 9/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
+2021/02/25-02:32:28.654 1c59 Level-0 table #8: started
+2021/02/25-02:32:28.730 1c59 Level-0 table #8: 214766 bytes OK
+2021/02/25-02:32:28.734 1c59 Delete type=0 #4
+2021/02/25-02:32:28.734 1c59 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/25-02:32:28.735 1c59 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x04\x02\x02\x01\x13\x009\x007\x002\x005\x002\x006\x006\x002\x009\x007\x002\x008\x00%\x004\x000\x00c\x00.\x00u\x00s' @ 13978 : 1
+2021/02/25-02:32:28.735 1c59 Compacting 1@1 + 1@2 files
+2021/02/25-02:32:28.758 1c59 Generated table #9@1: 4384 keys, 167722 bytes
+2021/02/25-02:32:28.758 1c59 Compacted 1@1 + 1@2 files => 167722 bytes
+2021/02/25-02:32:28.760 1c59 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/02/25-02:32:28.760 1c59 Delete type=2 #8
+2021/02/25-02:32:28.760 1c59 Delete type=2 #5
+2021/02/25-02:32:28.761 1c59 Manual compaction at level-1 from '\x00\x04\x02\x02\x01\x13\x009\x007\x002\x005\x002\x006\x006\x002\x009\x007\x002\x008\x00%\x004\x000\x00c\x00.\x00u\x00s' @ 13978 : 1 .. (end); will stop at (end)
